@@ -4,7 +4,7 @@ import pymongo
 
 app = Flask(__name__)
 
-client = pymongo.MongoClient("mongodb://localhost:27017")
+client = pymongo.MongoClient("MONGO_URL")
 db = client.test_database
 collection = db.test_collection
 
