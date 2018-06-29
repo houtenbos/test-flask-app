@@ -33,7 +33,7 @@ def hello_world():
             content += '<br>' + post + '<br>'
         page = head + content + end
     except Exception as e:
-        print('Error:')
+        print('Error hello_world:')
         print(e)
         page = 'error!'
     return page

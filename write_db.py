@@ -8,7 +8,7 @@ try:
     collection = db.test_collection
     print('connected to database')
 except Exception as e:
-    print('Error:')
+    print('Error write_db:')
     print(e)
 
 
