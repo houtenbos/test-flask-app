@@ -32,10 +32,11 @@ def hello_world():
         for post in posts:
             content += '<br>' + post + '<br>'
         page = head + content + end
-        return page
     except Exception as e:
         print('Error:')
         print(e)
+        page = 'error!'
+    return page
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
