@@ -10,27 +10,11 @@ collection = db.test_collection
 
 @app.route('/')
 def hello_world():
-    entries = collection.find()
-
-    msg = ''
-    date = ''
-    posts = []
-
-    for entry in entries:
-        if 'msg' in entry:
-            msg = entry['msg']
-        if 'date' in entry:
-            date = entry['date']
-        post = msg + '<br>' + str(date)
-        posts.append(post)
-
-    head = '<html>'
-    end = '</html>'
-    content = ''
-    for post in posts:
-        content += '<br>' + post + '<br>'
-    page = head + content + end
+    page = 'hello lester'
     return page
 
 if __name__ == '__main__':
-   app.run(host='159.69.7.211', port=80)
+    port = int(os.environ.get('PORT', 5000))
+    print(port)
+    app.run(host='127.0.0.1', port=port)
+
