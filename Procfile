@@ -1,2 +1,1 @@
-write_db: python3 write_db.py
-web: python3 app.py
+web: gunicorn app:app --workers=4 && python3 write_db.py
