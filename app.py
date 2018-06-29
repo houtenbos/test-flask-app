@@ -5,6 +5,7 @@ import pymongo
 app = Flask(__name__)
 
 mongo_url = os.environ['MONGO_URL']
+print(mongo_url)
 client = pymongo.MongoClient(mongo_url)
 db = client.test_database
 collection = db.test_collection
