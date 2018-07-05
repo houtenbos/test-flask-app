@@ -3,6 +3,7 @@ from flask import Flask
 import pymongo
 
 app = Flask(__name__)
+test = 1
 
 mongo_url = os.environ['MONGO_URL']
 print(mongo_url)
